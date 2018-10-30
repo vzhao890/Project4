@@ -12,7 +12,7 @@ public class Runner {
 
     public static void main(String[] args)
     {
-
+//a
         int LengthA = (int)(Math.random()*LA);
         int WidthA = (int)(Math.random()*WA);
         Room[][] building = new Room[LengthA][WidthA];
