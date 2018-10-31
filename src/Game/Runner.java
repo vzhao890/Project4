@@ -10,12 +10,40 @@ import java.util.Scanner;
 public class Runner {
     private static boolean gameOn = true;
 
-    public static void main(String[] args)
-    {
-//a
-        int LengthA = (int)(Math.random()*LA);
-        int WidthA = (int)(Math.random()*WA);
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int LengthA = 0;
+        int WidthA = 0;
         Room[][] building = new Room[LengthA][WidthA];
+        System.out.println("Welcome To The Infinity Wars BattleField");
+        System.out.println("Please Choose a Map Size" + "\n"
+                + "Type S for Small Map(7x7)" + "\n"
+                + "Type M for Medium Map(9x9)" + "\n"
+                + "Type L for Large Map(12x12)"
+        );
+        String mapchoice = in.nextLine();
+        if (mapchoice.equalsIgnoreCase("S")) {
+            LengthA = 7;
+            WidthA = 7;
+        } else if (mapchoice.equalsIgnoreCase("M")) {
+            LengthA = 9;
+            WidthA = 9;
+        } else if (mapchoice.equalsIgnoreCase("L")) {
+            LengthA = 12;
+            WidthA = 12;
+        }
+        for(int i=0;i<building.length;i++)
+        {
+            for(int k=0;k<building[i].length;k++)
+            {
+                System.out.print(building[i][k]);
+            }
+            System.out.println();
+        }
+
+
+
+
         int lifePoint = 100;
 
         //Fill the building with normal rooms
@@ -38,7 +66,7 @@ public class Runner {
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
         building[0][0].enterRoom(player1);
-        Scanner in = new Scanner(System.in);
+
 
 
 
@@ -66,7 +94,7 @@ public class Runner {
      * @param p person moving
      * @param map the 2D array of rooms
      * @return
-     */
+    */
     public static boolean validMove(String move, Person p, Room[][] map)
     {
         move = move.toLowerCase().trim();
@@ -127,4 +155,5 @@ public class Runner {
     {
         gameOn = false;
     }
+
 }
