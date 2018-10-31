@@ -14,7 +14,6 @@ public class Runner {
         Scanner in = new Scanner(System.in);
         int LengthA = 0;
         int WidthA = 0;
-        Room[][] building = new Room[LengthA][WidthA];
         System.out.println("Welcome To The Infinity Wars BattleField");
         System.out.println("Please Choose a Map Size" + "\n"
                 + "Type S for Small Map(7x7)" + "\n"
@@ -32,6 +31,7 @@ public class Runner {
             LengthA = 12;
             WidthA = 12;
         }
+        Room[][] building = new Room[LengthA][WidthA];
         for(int i=0;i<building.length;i++)
         {
             for(int k=0;k<building[i].length;k++)
@@ -53,7 +53,6 @@ public class Runner {
             {
                 building[x][y] = new Room(x,y);
             }
-
         }
 
         //Create a random winning room.
@@ -63,7 +62,7 @@ public class Runner {
         x = (int)(Math.random()*building.length);
         y = (int)(Math.random()*building.length);
         building[x][y] = new Thanos(x,y);
-        //Setup player 1 and the input scanner
+
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
         building[0][0].enterRoom(player1);
 
