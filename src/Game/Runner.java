@@ -35,9 +35,7 @@ public class Runner {
             }
         }
         Room[][] building = new Room[LengthA][WidthA];
-
-
-
+        Board.print();
 
 
         int lifePoint = 100;

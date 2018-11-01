@@ -1,7 +1,7 @@
 package Game;
 import Rooms.Room;
 import Rooms.Thanos;
-
+import Game.Runner;
 import Rooms.Villain;
 
 public class Board
@@ -51,5 +51,18 @@ public class Board
         }
         return str;
     }
+    public void print()
+    {
+        for(int i=0; i<rooms.length;i++)
+        {
+            for(int k=0;k<rooms[i].length;k++)
+            {
+                System.out.print(rooms[i][k]);
+            }
+            System.out.println();
+        }
+    }
+
+
 
 }
