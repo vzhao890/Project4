@@ -7,7 +7,7 @@ public class Thanos extends Room{
     {
         super(x, y);
     }
-    //Timer
+
 
     public void enterRoom(Person x)
     {

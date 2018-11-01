@@ -2,9 +2,7 @@ package Game;
 
 import People.Person;
 import Rooms.Room;
-import Rooms.Thanos;
-import Rooms.WinningRoom;
-
+import Game.Board;
 import java.util.Scanner;
 
 public class Runner {
@@ -21,47 +19,30 @@ public class Runner {
                 + "Type L for Large Map(12x12)"
         );
         String mapchoice = in.nextLine();
-        if (mapchoice.equalsIgnoreCase("S")) {
-            LengthA = 7;
-            WidthA = 7;
-        } else if (mapchoice.equalsIgnoreCase("M")) {
-            LengthA = 9;
-            WidthA = 9;
-        } else if (mapchoice.equalsIgnoreCase("L")) {
-            LengthA = 12;
-            WidthA = 12;
+        while(!mapchoice.equalsIgnoreCase("s")||(!mapchoice.equalsIgnoreCase("m"))||(!mapchoice.equalsIgnoreCase("l"))) {
+            if (mapchoice.equalsIgnoreCase("S")) {
+                LengthA = 7;
+                WidthA = 7;
+            } else if (mapchoice.equalsIgnoreCase("M")) {
+                LengthA = 9;
+                WidthA = 9;
+            } else if (mapchoice.equalsIgnoreCase("L")) {
+                LengthA = 12;
+                WidthA = 12;
+            } else {
+                System.out.println("Please Type S , M , L");
+                mapchoice = in.nextLine();
+            }
         }
         Room[][] building = new Room[LengthA][WidthA];
-        for(int i=0;i<building.length;i++)
-        {
-            for(int k=0;k<building[i].length;k++)
-            {
-                System.out.print(building[i][k]);
-            }
-            System.out.println();
-        }
+
 
 
 
 
         int lifePoint = 100;
 
-        //Fill the building with normal rooms
-        for (int x = 0; x<building.length; x++)
-        {
-            for (int y = 0; y < building[x].length; y++)
-            {
-                building[x][y] = new Room(x,y);
-            }
-        }
 
-        //Create a random winning room.
-        int x = (int)(Math.random()*building.length);
-        int y = (int)(Math.random()*building.length);
-        building[x][y] = new WinningRoom(x, y);
-        x = (int)(Math.random()*building.length);
-        y = (int)(Math.random()*building.length);
-        building[x][y] = new Thanos(x,y);
 
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
         building[0][0].enterRoom(player1);
