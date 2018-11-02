@@ -29,21 +29,24 @@ public class Runner {
             } else if (mapchoice.equalsIgnoreCase("L")) {
                 LengthA = 12;
                 WidthA = 12;
+            //}else if(mapchoice.equalsIgnoreCase("secret")) {}
             } else {
                 System.out.println("Please Type S , M , L");
                 mapchoice = in.nextLine();
             }
         }
-        Room[][] building = new Room[LengthA][WidthA];
-        Board.print();
+        Board building = new Board(LengthA,WidthA);
 
 
-        int lifePoint = 100;
+
+
+
+        //int lifePoint = 100;
 
 
 
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
-        building[0][0].enterRoom(player1);
+        building.enterRoom(player1,0,0);
 
 
 
@@ -52,7 +55,7 @@ public class Runner {
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
             String move = in.nextLine();
-            if(validMove(move, player1, building))
+            if(validMove(move, player1, building.getRooms()))
             {
                 System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 

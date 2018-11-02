@@ -1,9 +1,10 @@
 package Game;
+import People.Person;
 import Rooms.Room;
 import Rooms.Thanos;
 import Game.Runner;
 import Rooms.Villain;
-
+import People.Person;
 public class Board
 {
     private Room[][] rooms;
@@ -12,10 +13,29 @@ public class Board
     {
         this.rooms = a;
     }
+    public Board(int height, int width)
+    {
+        rooms=new Room[height][width];
+        for(int i=0;i<rooms.length;i++)
+        {
+            for(int k=0;k<rooms[i].length;k++)
+            {
+                rooms[i][k]=new Room(i,k);
+            }
+        }
+    }
 
+    public Room[][] getRooms() {
+        return rooms;
+    }
+
+    public void enterRoom(Person a, int x, int y)
+    {
+      rooms[x][y].enterRoom(a);
+    }
     public void generateSpecial()
     {
-        //Create a random winning room.
+        //Create a random Boss room.
         int x = 0;
         int y = 0;
         while (x == 0 && y == 0) {
@@ -23,7 +43,7 @@ public class Board
             y = (int) (Math.random() * rooms.length);
         }
         rooms[x][y] = new Thanos(x, y);
-        //Create a random trap room that can't be the same room as the winning room.
+        //Create a random Villain room
         int a = 0;
         int b = 0;
         while (a == 0 && b == 0)
@@ -45,9 +65,9 @@ public class Board
         {
             for(Room x:a)
             {
-                str += x;
+                str =str + x;
             }
-            str += "\n";
+            str = str + "\n";
         }
         return str;
     }
