@@ -12,6 +12,10 @@ public class Room {
         xLoc = x;
         yLoc = y;
     }
+    public String toString()
+    {
+        return "["+occupant+"]";
+    }
 
     /**
      * Method controls the results when a person enters this room.

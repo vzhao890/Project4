@@ -18,8 +18,11 @@ public class Runner {
                 + "Type M for Medium Map(9x9)" + "\n"
                 + "Type L for Large Map(12x12)"
         );
-        String mapchoice = in.nextLine();
-        while(!mapchoice.equalsIgnoreCase("s")||(!mapchoice.equalsIgnoreCase("m"))||(!mapchoice.equalsIgnoreCase("l"))) {
+
+        String mapchoice = "";
+
+        while(!mapchoice.equalsIgnoreCase("s")&&(!mapchoice.equalsIgnoreCase("m"))&&(!mapchoice.equalsIgnoreCase("l"))) {
+            mapchoice=in.nextLine();
             if (mapchoice.equalsIgnoreCase("S")) {
                 LengthA = 7;
                 WidthA = 7;
@@ -36,7 +39,8 @@ public class Runner {
             }
         }
         Board building = new Board(LengthA,WidthA);
-
+        building.generateSpecial();
+        building.print();
 
 
 
@@ -57,6 +61,7 @@ public class Runner {
             String move = in.nextLine();
             if(validMove(move, player1, building.getRooms()))
             {
+                building.print();
                 System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
 
             }
