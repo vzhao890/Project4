@@ -12,7 +12,7 @@ public class Runner {
         Scanner in = new Scanner(System.in);
         int LengthA = 0;
         int WidthA = 0;
-        System.out.println("Welcome To The Infinity Wars BattleField");
+        System.out.println("Welcome To The Finite Wars BattleField");
         System.out.println("Please Choose a Map Size" + "\n"
                 + "Type S for Small Map(7x7)" + "\n"
                 + "Type M for Medium Map(9x9)" + "\n"
@@ -44,18 +44,18 @@ public class Runner {
 
 
 
-
-        //int lifePoint = 100;
-
+        int lifePoint=100;
 
 
-        Person player1 = new Person("FirstName", "FamilyName", 0,0);
+
+
+        Person player1 = new Person("FirstName", "FamilyName", 0,0,100);
         building.enterRoom(player1,0,0);
 
 
 
 
-        while(gameOn)
+        while(gameOn&&lifePoint!=0)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
             String move = in.nextLine();

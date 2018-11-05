@@ -14,6 +14,7 @@ public class Thanos extends Room{
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+        System.out.println("You Have Met Thanos");
         Runner.gameOff();
     }
 }

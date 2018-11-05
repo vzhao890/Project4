@@ -44,19 +44,15 @@ public class Board
         }
         rooms[x][y] = new Thanos(x, y);
         //Create a random Villain room
-        int a = 0;
-        int b = 0;
-        while (a == 0 && b == 0)
+        int a=0;
+        int b=0;
+        for(int i=0;i<rooms[a].length;i++)
         {
             a =(int) (Math.random() * rooms.length);
             b =(int) (Math.random() * rooms.length);
-            if(a == x && b ==x)
-            {
-                a=0;
-                b=0;
-            }
+            rooms[a][b] = new Villain(a, b);
         }
-        rooms[a][b] = new Villain(a, b);
+
     }
     public String toString()
     {

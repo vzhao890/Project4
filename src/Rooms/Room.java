@@ -14,7 +14,11 @@ public class Room {
     }
     public String toString()
     {
-        return "["+occupant+"]";
+        if(occupant==null)
+        {
+            return "[ ]";
+        }
+        return "[S]";
     }
 
     /**
