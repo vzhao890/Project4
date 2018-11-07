@@ -17,4 +17,9 @@ public class Thanos extends Room{
         System.out.println("You Have Met Thanos");
         Runner.gameOff();
     }
+    public String toString()
+    {
+        return "[T]";
+    }
+
 }

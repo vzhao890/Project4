@@ -17,4 +17,8 @@ public class Villain extends Room {
         System.out.println("You have met have been struck by a goon." + "\n" + "-10 Health");
         lifePoint=lifePoint-10;
     }
+    public String toString()
+    {
+        return "[V]";
+    }
 }
