@@ -2,7 +2,6 @@ package Game;
 
 import People.Person;
 import Rooms.Room;
-import Game.Board;
 import java.util.Scanner;
 
 public class Runner {
@@ -58,6 +57,7 @@ public class Runner {
         while(gameOn&&lifePoint!=0)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
+            System.out.println("(You Start At The Top Left Corner of the Map");
             String move = in.nextLine();
             if(validMove(move, player1, building.getRooms()))
             {

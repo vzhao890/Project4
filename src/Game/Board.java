@@ -2,9 +2,8 @@ package Game;
 import People.Person;
 import Rooms.Room;
 import Rooms.Thanos;
-import Game.Runner;
 import Rooms.Villain;
-import People.Person;
+
 public class Board
 {
     private Room[][] rooms;
@@ -35,14 +34,6 @@ public class Board
     }
     public void generateSpecial()
     {
-        //Create a random Boss room.
-        int x = 0;
-        int y = 0;
-        while (x == 0 && y == 0) {
-            x = (int) (Math.random() * rooms.length);
-            y = (int) (Math.random() * rooms.length);
-        }
-        rooms[x][y] = new Thanos(x, y);
         //Create a random Villain room
         int a=0;
         int b=0;
@@ -52,6 +43,16 @@ public class Board
             b =(int) (Math.random() * rooms.length);
             rooms[a][b] = new Villain(a, b);
         }
+        //Create a random Boss room.
+        int x = 0;
+        int y = 0;
+        while (x == 0 && y == 0) {
+            x = (int) (Math.random() * rooms.length);
+            y = (int) (Math.random() * rooms.length);
+        }
+        rooms[x][y] = new Thanos(x, y);
+
+
 
     }
     public String toString()
