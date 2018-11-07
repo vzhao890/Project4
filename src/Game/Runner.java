@@ -21,7 +21,7 @@ public class Runner {
 
         String mapchoice = "";
 
-        while(!mapchoice.equalsIgnoreCase("s")&&(!mapchoice.equalsIgnoreCase("m"))&&(!mapchoice.equalsIgnoreCase("l"))) {
+        while(!mapchoice.equalsIgnoreCase("s")&&(!mapchoice.equalsIgnoreCase("m"))&&(!mapchoice.equalsIgnoreCase("l"))&&(!mapchoice.equalsIgnoreCase("secret"))) {
             mapchoice=in.nextLine();
             if (mapchoice.equalsIgnoreCase("S")) {
                 LengthA = 7;
