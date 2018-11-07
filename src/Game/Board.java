@@ -1,8 +1,6 @@
 package Game;
 import People.Person;
-import Rooms.Room;
-import Rooms.Thanos;
-import Rooms.Villain;
+import Rooms.*;
 
 public class Board
 {
@@ -43,6 +41,13 @@ public class Board
             b =(int) (Math.random() * rooms.length);
             rooms[a][b] = new Villain(a, b);
         }
+        //Create a random Ally Room
+        for(int i=0;i<rooms[a].length;i++)
+        {
+            a =(int) (Math.random() * rooms.length);
+            b =(int) (Math.random() * rooms.length);
+            rooms[a][b] = new Ally(a, b);
+        }
         //Create a random Boss room.
         int x = 0;
         int y = 0;
@@ -53,8 +58,8 @@ public class Board
         rooms[x][y] = new Thanos(x, y);
 
 
-
     }
+
     public String toString()
     {
         String str ="";

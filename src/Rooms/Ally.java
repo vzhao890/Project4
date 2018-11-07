@@ -1,12 +1,9 @@
 package Rooms;
-
 import People.Person;
-
-public class Villain extends Room {
-
+public class Ally extends Room{
     private boolean explore=false;
 
-    public Villain(int x, int y) {
+    public Ally(int x, int y) {
         super(x, y);
 
     }
@@ -14,9 +11,8 @@ public class Villain extends Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You have met have been struck by a goon." + "\n" + "-10 Health");
-        explore=true;
-        lifePoint=lifePoint-50;
+        System.out.println("You have met Thor" + "\n" + "+10 Health");
+        lifePoint=lifePoint+10;
     }
     public String toString()
     {
@@ -26,13 +22,12 @@ public class Villain extends Room {
         }
         else if(explore==false)
         {
-            return "[V]";
+            return "[A]";
         }
         else
         {
             return "[ ]";
         }
-
 
     }
 }

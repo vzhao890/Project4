@@ -11,6 +11,7 @@ public class Runner {
         Scanner in = new Scanner(System.in);
         int LengthA = 0;
         int WidthA = 0;
+
         System.out.println("Welcome To The Finite Wars BattleField");
         System.out.println("Please Choose a Map Size" + "\n"
                 + "Type S for Small Map(7x7)" + "\n"
@@ -31,33 +32,29 @@ public class Runner {
             } else if (mapchoice.equalsIgnoreCase("L")) {
                 LengthA = 12;
                 WidthA = 12;
-            //}else if(mapchoice.equalsIgnoreCase("secret")) {}
+            //} else if(mapchoice.equalsIgnoreCase("secret")) {
+
             } else {
                 System.out.println("Please Type S , M , L");
                 mapchoice = in.nextLine();
             }
         }
-        Board building = new Board(LengthA,WidthA);
+
+            Board building = new Board(LengthA, WidthA);
+
         building.generateSpecial();
         building.print();
 
-
-
         int lifePoint=100;
-
-
-
 
         Person player1 = new Person("FirstName", "FamilyName", 0,0,100);
         building.enterRoom(player1,0,0);
 
 
-
-
         while(gameOn&&lifePoint!=0)
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
-            System.out.println("(You Start At The Top Left Corner of the Map");
+            System.out.println("(You Start At The Top Left Corner of the Map)");
             String move = in.nextLine();
             if(validMove(move, player1, building.getRooms()))
             {
