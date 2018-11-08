@@ -13,6 +13,8 @@ public class Ally extends Room{
         x.setyLoc(this.yLoc);
         System.out.println("You have met Thor" + "\n" + "+10 Health");
         lifePoint=lifePoint+10;
+        explore=true;
+
     }
     public String toString()
     {
