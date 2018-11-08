@@ -1,11 +1,16 @@
 package People;
 
+import Game.Runner;
+import Rooms.Ally;
+
 public class Person {
     String firstName;
     String familyName;
     int xLoc, yLoc;
-    int lifePoint;
-    int atkPower;
+    int SlifePoint;
+    int TlifePoint;
+    int SatkPower;
+    int TatkPower;
 
     public int getxLoc()
     {
@@ -26,14 +31,25 @@ public class Person {
     {
         this.yLoc = yLoc;
     }
-
-    public Person (String firstName, String familyName, int xLoc, int yLoc, int lifePoint, int atkPower)
+    public void minusS()
+    {
+        SlifePoint=SlifePoint-10;
+        if(SlifePoint==0)
+        {
+            Runner.gameOff();
+        }
+    }
+    public void healS()
+    {
+        SlifePoint=SlifePoint+10;
+    }
+    public Person (String firstName, String familyName, int xLoc, int yLoc, int SlifePoint, int SatkPower, int TlifePoint, int TatkPower)
     {
         this.firstName = firstName;
         this.familyName = familyName;
         this.xLoc = xLoc;
         this.yLoc = yLoc;
-        this.lifePoint=lifePoint;
-        this.atkPower=atkPower;
+        this.SlifePoint=SlifePoint;
+        this.SatkPower=SatkPower;
     }
 }

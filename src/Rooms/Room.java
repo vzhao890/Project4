@@ -1,11 +1,11 @@
 package Rooms;
 
 import People.Person;
-import Game.Runner;
+
 public class Room {
     Person occupant;
     int xLoc,yLoc;
-    int lifePoint;
+   
 
     public Room(int x, int y)
     {

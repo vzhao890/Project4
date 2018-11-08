@@ -49,8 +49,8 @@ public class Runner {
 
         int lifePoint=100;
 
-        SBoy player1 = new SBoy("FirstName", "FamilyName", 0,0,100,10 );
-        Thanos player2 = new Thanos("F", "L", 5,5,1000,50);
+        SBoy player1 = new SBoy("FirstName", "FamilyName", 0,0,100,10,0,0 );
+        Thanos player2 = new Thanos("F", "L", 5,5,0,0,1000,50);
         building.enterRoom(player1,0,0);
 
 
