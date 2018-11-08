@@ -48,14 +48,9 @@ public class Board
             b =(int) (Math.random() * rooms.length);
             rooms[a][b] = new Ally(a, b);
         }
-        //Create a random Boss room.
-        int x = 0;
-        int y = 0;
-        while (x == 0 && y == 0) {
-            x = (int) (Math.random() * rooms.length);
-            y = (int) (Math.random() * rooms.length);
-        }
-        rooms[x][y] = new Thanos(x, y);
+        //Create a  Boss room.
+
+        rooms[5][5] = new BossRoom(5, 5);
 
 
     }

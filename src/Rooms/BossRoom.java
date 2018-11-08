@@ -2,8 +2,8 @@ package Rooms;
 import Game.Runner;
 import People.Person;
 
-public class Thanos extends Room{
-    public Thanos(int x, int y)
+public class BossRoom extends Room{
+    public BossRoom(int x, int y)
     {
         super(x, y);
     }

@@ -1,6 +1,8 @@
 package Game;
 
 import People.Person;
+import People.SBoy;
+import People.Thanos;
 import Rooms.Room;
 import java.util.Scanner;
 
@@ -40,14 +42,15 @@ public class Runner {
             }
         }
 
-            Board building = new Board(LengthA, WidthA);
+        Board building = new Board(LengthA, WidthA);
 
         building.generateSpecial();
         building.print();
 
         int lifePoint=100;
 
-        Person player1 = new Person("FirstName", "FamilyName", 0,0,100);
+        SBoy player1 = new SBoy("FirstName", "FamilyName", 0,0,100,10 );
+        Thanos player2 = new Thanos("F", "L", 5,5,1000,50);
         building.enterRoom(player1,0,0);
 
 
