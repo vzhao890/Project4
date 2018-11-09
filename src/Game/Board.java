@@ -49,7 +49,7 @@ public class Board
             rooms[a][b] = new Ally(a, b);
         }
         //Create a  Boss room.
-
+        rooms[0][2] = new DrUniqueMath(0,2);
         rooms[5][5] = new BossRoom(5, 5);
 
 

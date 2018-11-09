@@ -7,10 +7,9 @@ public class Person {
     String firstName;
     String familyName;
     int xLoc, yLoc;
-    int SlifePoint;
-    int TlifePoint;
-    int SatkPower;
-    int TatkPower;
+    int lifePoint;
+
+
 
     public int getxLoc()
     {
@@ -33,23 +32,23 @@ public class Person {
     }
     public void minusS()
     {
-        SlifePoint=SlifePoint-10;
-        if(SlifePoint==0)
+        lifePoint=lifePoint-10;
+        if(lifePoint==0)
         {
             Runner.gameOff();
         }
     }
     public void healS()
     {
-        SlifePoint=SlifePoint+10;
+        lifePoint=lifePoint+10;
     }
-    public Person (String firstName, String familyName, int xLoc, int yLoc, int SlifePoint, int SatkPower, int TlifePoint, int TatkPower)
+    public Person (String firstName, String familyName, int xLoc, int yLoc, int lifePoint)
     {
         this.firstName = firstName;
         this.familyName = familyName;
         this.xLoc = xLoc;
         this.yLoc = yLoc;
-        this.SlifePoint=SlifePoint;
-        this.SatkPower=SatkPower;
+        this.lifePoint=lifePoint;
+
     }
 }
