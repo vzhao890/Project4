@@ -20,7 +20,7 @@ public class Room {
      */
     public void enterRoom(Person x)
     {
-        System.out.println("You have arrived at the BattleFieldM");
+        System.out.println("You are exploring the Finite BattleField");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);

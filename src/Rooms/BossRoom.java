@@ -31,7 +31,7 @@ public class BossRoom extends Room{
             }
             else if(answer.equalsIgnoreCase("no"))
             {
-                System.out.println("You have made the wrong decision"+"\n"+" You feel a great disturbance in the Universe, as if millions of voices suddenly cried out in terror and were suddenly silenced."+"\n"+" You fear something terrible has happened");
+                System.out.println("You have made the wrong decision"+"\n"+"You feel a great disturbance in the Universe, as if millions of voices suddenly cried out in terror and were suddenly silenced."+"\n"+"You fear something terrible has happened");
                in.close();
                 Runner.gameOff();
             }

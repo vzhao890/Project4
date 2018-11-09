@@ -32,8 +32,8 @@ public class Runner {
                 LengthA = 9;
                 WidthA = 9;
             } else if (mapchoice.equalsIgnoreCase("L")) {
-                LengthA = 12;
-                WidthA = 12;
+                LengthA = 10;
+                WidthA = 10;
             //} else if(mapchoice.equalsIgnoreCase("secret")) {
 
             } else {
